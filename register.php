@@ -1,0 +1,31 @@
+<head>
+  <title>Herbland | Create Account</title>
+</head>
+<?php
+    include 'includes/header.php';
+?>
+
+<body>
+  <section>
+    <form action="#" method="POST">
+      <p>First Name</p>
+      <input type="text" name="firstName" required />
+      <p>Last Name</p>
+      <input type="text" name="lastName" required />
+      <p>Email Address</p>
+      <input type="email" name="userEmail" required />
+      <p>Password</p>
+      <input type="password" name="userPassword" required />
+      <p>Re-Enter Password</p>
+      <input type="password" name="rePassword" required /><br />
+
+      <button name="userRegister" type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+
+<?php
+    include_once 'includes/db.php';
+    createUser();
+
+    ?>

@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navcontaniner {
+  background-color: white;
+  width: 100%;
+  height: 60px;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+}
+
+.container {
+  padding: 0% 20% 0% 20%;
+}
+.logo {
+  width: 60%;
+  align-items: center;
+  background-image: url("img");
+}
+
+.logo h3 {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: green;
+}
+
+.navlinks ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding-left: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Cabin", sans-serif;
+  color: black;
+  background-image: ;
+}
+
+.landingContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.landingContainer h3 {
+  font-family: "Cabin", sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  width: 55%;
+  margin-top: 100px;
+}
+
+.landingContainer p {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  width: 55%;
+  margin-top: 45px;
+  color: green;
+}
+
+span {
+  color: green;
+}
+.landingContainer button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: green;
+  margin-top: 50px;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  margin-top: 50px;
+}
+.img {
+  width: 45%;
+}
+
+.img img {
+  height: 450px;
+  margin-top: 15px;
+}
+
+.missionDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.missionSection h4 {
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+h4::after {
+  content: "";
+  background-color: green;
+  height: 5px;
+  width: 50px;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  margin-top: 3px;
+  font-family: "Cabin", sans-serif;
+}
+
+.missionImg img {
+  height: 250px;
+  margin-left: 220px;
+}
+.missionDesc {
+  width: 50%;
+}
+
+.missionDesc p {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.smallheading {
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(7, 7, 7);
+}
+
+.footerContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.footerheadings {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 15px;
+}
+
+.formContainer {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.formContainer input,
+textarea,
+select {
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.formContainer button {
+  margin-top: 40px;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  background-color: green;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.userLogin {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+.userLoginContainer {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comlogo {
+  width: 20%;
+  height: 55vh;
+  background-color: rgb(6, 97, 6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comlogo h3,
+.comlogo p {
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+}
+.comlogo p {
+  font-size: 18px;
+}
+
+.userInputs {
+  width: 30%;
+  height: 55vh;
+  background-color: white;
+}
+.userInputs h4 {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.userInputs p,
+input,
+button {
+  color: black;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  margin-left: 60px;
+  margin-top: 15px;
+}
+
+.userInputs input,
+button {
+  width: 250px;
+  height: 30px;
+  outline: none;
+  font-family: "Cabin", sans-serif;
+}
+.userInputs button {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(6, 97, 6);
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  height: 40px;
+}
+
+.itemContainer h4 {
+  margin-top: 100px;
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+#items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.item {
+  width: 23%;
+  height: 380px;
+  background-color: whitesmoke;
+  margin: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  padding-top: 20px;
+}
+
+.item h3,
+.item p {
+  font-family: "Cabin", sans-serif;
+}
+
+.item p {
+  height: 35px;
+  margin: 0 40px;
+  margin-top: 20px;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+.span {
+  color: green;
+  font-size: 18px;
+  font-family: "Cabin", sans-serif;
+}
+.buttons {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+#load_more {
+  margin-top: 40px;
+  outline: none;
+  height: 35px;
+  font-family: "Cabin", sans-serif;
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-color: green;
+  position: center;
+}
+.addTocart {
+  width: 50%;
+  height: 35px;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  background-color: green;
+  color: white;
+  font-family: "Cabin", sans-serif;
+  font-weight: bold;
+}
