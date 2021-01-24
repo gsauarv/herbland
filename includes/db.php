@@ -137,4 +137,15 @@ function getItems()
     
 }
 
+function get_items_details($itemId)
+{
+    global $conn;
+    $stmt = "SELECT * FROM itemStore where itemId = '$itemId' ;";
+    $result = mysqli_query($conn,$stmt);
+    if(mysqli_num_rows($result))
+    {
+        return $result;
+    }
+}
+
 ?>

@@ -344,6 +344,7 @@ button {
   border: none;
   background-color: green;
   position: center;
+  cursor: pointer;
 }
 .addTocart {
   width: 50%;
@@ -355,4 +356,21 @@ button {
   color: white;
   font-family: "Cabin", sans-serif;
   font-weight: bold;
+}
+
+.itemDetailContainer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.itemShow {
+  width: 50%;
+  background-color: rgb(247, 247, 247);
+}
+
+.itemDesc {
+  width: 50%;
 }
