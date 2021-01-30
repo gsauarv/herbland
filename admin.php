@@ -12,6 +12,19 @@
     />
     <link href="static/css/style.css" rel="stylesheet" />
   </head>
+  <?php 
+    session_start();
+    include 'includes/header.php';
+    if(isset($_SESSION['id']))
+    {
+      include 'includes/nav_active.php';
+    }
+    else
+    {
+      include 'includes/nav.php';
+    }
+   
+?>
   <body>
     <div class="formContainer">
       <div class="container">

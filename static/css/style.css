@@ -93,6 +93,7 @@ span {
   width: 180px;
   height: 40px;
   border: none;
+  margin: 0;
   border-radius: 20px;
   background-color: green;
   margin-top: 50px;
@@ -195,6 +196,7 @@ footer {
 .formContainer input,
 textarea,
 select {
+  margin: 0px;
   width: 250px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -202,8 +204,10 @@ select {
 }
 
 .formContainer button {
+  margin: 0px;
+
   margin-top: 40px;
-  width: 150px;
+  width: 250px;
   height: 40px;
   outline: none;
   background-color: green;
@@ -284,6 +288,7 @@ button {
   color: white;
   font-weight: bold;
   margin-top: 40px;
+
   height: 40px;
 }
 
@@ -344,6 +349,8 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  cursor: pointer;
+
   padding-bottom: 150px;
 }
 
@@ -369,6 +376,7 @@ button {
   color: white;
   font-family: "Cabin", sans-serif;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .itemDetailContainer {
@@ -477,4 +485,66 @@ button {
   width: 300px;
   font-weight: bold;
   height: 35px;
+}
+
+.bucketContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemOrder {
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  height: 120px;
+  margin-top: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemOrder img {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.itemOrder h3 {
+  font-family: "Cabin", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 5%;
+}
+
+.itemOrder span {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  width: 15%;
+  margin-left: 40px;
+}
+
+.itemOrder input,
+.itemOrder button {
+  border: none;
+  background-color: white;
+  width: 100px;
+  height: 30px;
+  padding-left: 20px;
+  border-radius: 15px;
+  outline: none;
+}
+
+.itemOrder button {
+  width: 150px;
+  height: 35px;
+  border-radius: 0;
+  text-align: center;
+  padding: 0px 20px;
+  font-family: "Cabin", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: green;
+  cursor: pointer;
+  color: white;
 }

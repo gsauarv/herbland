@@ -86,6 +86,7 @@ function createUser()
 
 function login()
 {
+    
     global $conn;
     if(isset($_POST['user_submit']))
     {
@@ -104,12 +105,18 @@ function login()
                          $userPassword = $row['userPassword'];
                      }
                     mysqli_close($conn);   
-                    if($userEmail == $inputEmail && $userPassword == $inputPassword)
+                   
+                    if($userEmail === 'admin@admin.com' and $userPassword == $inputPassword)
+                    {
+                        header("Location:admin.php");
+                    }
+                    else if($userEmail == $inputEmail && $userPassword == $inputPassword)
                     { 
                         session_start();
-                        // $_SESSION['id'] = $userEmail;
-                        header ("Location:itemBucket.php");
+                        $_SESSION['id'] = $userEmail;
+                        header ("Location:shop.php");
                     }
+
             }
            
         }
@@ -168,8 +175,42 @@ function itemData($itemId)
     $stmt = "SELECT itemName,itemPrice,itemPic from itemStore where itemId = '$itemId';";
     $result = mysqli_query($conn,$stmt);
     return $result;
+    $stmt->close();
+    $conn ->close(); 
     
    
+}
+
+function getCartDetails($userEmail)
+{
+
+    global $conn;
+    $stmt = "SELECT * from itemOrder where userEmail = '$userEmail';";
+    $result = mysqli_query($conn,$stmt);
+    return $result; 
+    $stmt->close();
+}
+
+function changeQty($itemName,$newQty,$userEmail)
+{
+    if(isset($_POST['alter']))
+    {
+        global $conn;
+        $stmt = "UPDATE itemOrder SET itemQty = '$newQty' where itemName = '$itemName' and userEmail = '$userEmail';";
+        mysqli_query($conn,$stmt);
+    }
+   
+
+}
+
+function removeItem($itemName,$userEmail)
+{
+    if(isset($_POST['delete']))
+    {
+        global $conn;
+        $stmt = "DELETE FROM itemOrder where itemName = '$itemName' and userEmail = '$userEmail';";
+        mysqli_query($conn,$stmt);
+    }
 }
 
 ?>

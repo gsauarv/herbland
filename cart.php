@@ -36,23 +36,18 @@
              echo "<form method='POST' action='itemBucket.php'>";
              echo "<input name='itemQty' type='number' placeholder='Enter Quantity'  min='1' max='100' required>";
              echo "<br>";
-             echo "<button class= 'addTocart' style = 'margin-top:40px;' value = '$itemId' name='cart'>"."Buy Now"."</button>";
-             echo "</form>";
-   
+             echo "<button class= 'addTocart' style = 'margin-top:40px;' value = '$itemId' name='carts'>"."Buy Now"."</button>";          
+             echo "</form>";   
              echo "</div>";                
             }
             
 
         }
-
         else
         {
             echo "No Item Selected";
-        }
-
-
-       
-    ?>   
+        }       
+    ?> 
     </div>
     </div>
 </body>

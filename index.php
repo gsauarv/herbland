@@ -1,7 +1,16 @@
 <title>Herbland | Homepage</title>
 <?php 
-  include 'includes/header.php';
-  include 'includes/nav.php';
+    session_start();
+    include 'includes/header.php';
+    if(isset($_SESSION['id']))
+    {
+      include 'includes/nav_active.php';
+    }
+    else
+    {
+      include 'includes/nav.php';
+    }
+   
 ?>
     <section class="landingpage">
       <div class="container">

@@ -1,15 +1,17 @@
 <?php
     session_start();
-    if (isset($_SESSION['id']))
+    if (!isset($_SESSION['id']))
     {
+        header('Location:login.php');
+    }
         include 'includes/nav_active.php';
         echo "<div class='container'>";
-        if(isset($_POST['cart']))
+        if(isset($_POST['carts']))
         {
             
             include 'includes/db.php';
             $itemQty = $_POST['itemQty'];
-            $itemId = $_POST['cart'];
+            $itemId = $_POST['carts'];
            $result = itemData($itemId);
            if(mysqli_num_rows($result)>0)
            {
@@ -18,11 +20,12 @@
                    $itemName =  $row['itemName'];
                    $itemPic = $row['itemPic'];
                    $userEmail = $_SESSION['id'];
-                   $totalPrice = $row['itemPrice'] * $itemQty;
+                   $totalPrice = $row['itemPrice'];
     
                }
                addTocart($userEmail,$itemName,$itemPic,$itemQty,$totalPrice);
                echo "Item Added SuccessFully";
+               header('Location:userOrder.php');
 
            }
 
@@ -38,7 +41,7 @@
 
         
        
-    }
+    
 
     echo "</div>";
 ?>
