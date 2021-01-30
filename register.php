@@ -3,11 +3,13 @@
 </head>
 <?php
     include 'includes/header.php';
+    include 'includes/nav.php';
 ?>
 
 <body>
-  <section>
-    <form action="#" method="POST">
+  <section class="registerUser">
+  <div class = 'container'>
+      <form action="#" method="POST">
       <p>First Name</p>
       <input type="text" name="firstName" required />
       <p>Last Name</p>
@@ -19,8 +21,9 @@
       <p>Re-Enter Password</p>
       <input type="password" name="rePassword" required /><br />
 
-      <button name="userRegister" type="submit">Submit</button>
+      <button name="userRegister" type="submit">Register</button>
     </form>
+    </div>
   </section>
 </body>
 

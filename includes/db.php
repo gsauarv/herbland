@@ -66,7 +66,8 @@ function createUser()
                 $stmt -> bind_param("ssss",$firstname,$lastname,$userEmail,$userPassword);
                 $stmt->execute();
                 $stmt->close();
-                $conn ->close();                
+                $conn ->close();       
+                echo "Subbmited Successfully";         
             }catch(Exception $e)
             {
                 echo "Error";
@@ -103,14 +104,11 @@ function login()
                          $userPassword = $row['userPassword'];
                      }
                     mysqli_close($conn);   
-        
-                    echo $userEmail,$userPassword;
-
-                    if($userEmail == $inputEmail & $userPassword == $inputPassword)
-                    {
-                        $_POST['UserEmail'] = $userEmail;
-                        $_POST['userPassword'] = $userPassword;
-                        // header("Location:")
+                    if($userEmail == $inputEmail && $userPassword == $inputPassword)
+                    { 
+                        session_start();
+                        // $_SESSION['id'] = $userEmail;
+                        header ("Location:itemBucket.php");
                     }
             }
            
@@ -134,6 +132,8 @@ function getItems()
     {  
         return $result;
     }
+
+    mysqli_close($conn);
     
 }
 
@@ -146,6 +146,30 @@ function get_items_details($itemId)
     {
         return $result;
     }
+
+    mysqli_close($conn);
+}
+
+function addTocart($userEmail,$itemName,$itemPic,$itemQty,$itemPrice)
+{  
+
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO itemOrder (userEmail,itemName,itemPic,itemQty,itemPrice) VALUES (?,?,?,?,?);");
+                $stmt -> bind_param("sssss",$userEmail,$itemName,$itemPic,$itemQty,$itemPrice);
+                $stmt->execute();
+                $stmt->close();
+                $conn ->close(); 
+
+}
+
+function itemData($itemId)
+{
+    global $conn;
+    $stmt = "SELECT itemName,itemPrice,itemPic from itemStore where itemId = '$itemId';";
+    $result = mysqli_query($conn,$stmt);
+    return $result;
+    
+   
 }
 
 ?>

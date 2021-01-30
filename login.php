@@ -22,10 +22,9 @@
                        <input type="password" name="Usrpassword" required>
                        <br>
                        <button name="user_submit" type="submit">Login</button>
-
-                       <h4>Or</h4>
-                       <button name="register_user" type="submit">Create a Account</button>
-                   </form>             
+                       <h4>Or</h4>                     
+                   </form>
+                   <button name="register_user" type="submit" onClick = "location.href = 'register.php'" >Create a Account</button>             
            </div>
        </div>
     </section>

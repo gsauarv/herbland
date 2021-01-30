@@ -27,6 +27,7 @@
                 echo "<strong>"."<p class='span'>"."Price: ". $row['itemPrice'] . "</p>"."</strong>";
                 echo "<form method = 'POST' action='cart.php'>";
                 echo "<button type='submit' value = '$id' name = 'cart'  class ='addTocart'>" . 'Add to cart' . "</button>";
+            
                 echo "</form>";
 
                
