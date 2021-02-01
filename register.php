@@ -29,6 +29,6 @@
 
 <?php
     include_once 'includes/db.php';
-    createUser();
+    createUser();   
 
     ?>

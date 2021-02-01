@@ -1,8 +1,17 @@
 <title>Herbland | Shop</title>
-<?php
+<?php 
+    session_start();
     include 'includes/header.php';
-    include 'includes/nav.php';
-?>   
+    if(isset($_SESSION['id']))
+    {
+      include 'includes/nav_active.php';
+    }
+    else
+    {
+      include 'includes/nav.php';
+    }
+   
+?> 
 <body>
     <div class="container">
     <div class="itemDetailContainer">

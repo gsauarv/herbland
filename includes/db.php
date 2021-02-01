@@ -67,7 +67,8 @@ function createUser()
                 $stmt->execute();
                 $stmt->close();
                 $conn ->close();       
-                echo "Subbmited Successfully";         
+                echo "Subbmited Successfully";   
+                sendMail($userEmail);      
             }catch(Exception $e)
             {
                 echo "Error";
@@ -211,6 +212,39 @@ function removeItem($itemName,$userEmail)
         $stmt = "DELETE FROM itemOrder where itemName = '$itemName' and userEmail = '$userEmail';";
         mysqli_query($conn,$stmt);
     }
+}
+
+
+function sendMail($to)
+{
+    require './phpmailer/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+
+    $mail->Username = 'gsaurav2000@gmail.com';
+    $mail->Password = 'aayxkywkkadfzuqb';
+
+    $mail->setFrom('gsaurav2000@gmail.com','Herbland');
+    $mail->addAddress($to);
+    $mail->addReplyTo('gsaurav2000@gmail.com');
+
+    $mail->isHTML(false);
+    $mail->Subject = 'Herbland Registration';
+    $mail->Body = 'Thanks for Registring for Herbland. Happy Shooping';
+    if(!$mail->send())
+    {
+        echo "Not Send";
+    }
+
+    else
+    {
+        echo 'success';
+    }
+
 }
 
 ?>
